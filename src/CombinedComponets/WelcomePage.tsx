@@ -11,7 +11,15 @@ function WelcomePage() {
       </div>
 
       <div className="foreground-componet">
-        <CenteredButton />
+        <CenteredButton text="/login" textDisplay="Upload Pdf" />
+      </div>
+
+      <div className="foreground-componet">
+        <CenteredButton text="/upload" textDisplay="Uploads" />
+      </div>
+
+      <div className="foreground-componet">
+        <CenteredButton text="/study" textDisplay="Study" />
       </div>
     </div>
   );

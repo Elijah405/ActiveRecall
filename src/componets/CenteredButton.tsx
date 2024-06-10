@@ -1,10 +1,15 @@
 import { Link } from "react-router-dom";
 
-const CenteredButton = () => {
+interface CenteredButtonProps {
+  text: string;
+  textDisplay: string;
+}
+
+const CenteredButton = ({ text, textDisplay }: CenteredButtonProps) => {
   return (
     <div>
-      <Link to="/login" className="btn btn-primary">
-        Upload Pdf
+      <Link to={text} className="btn btn-primary">
+        {textDisplay}
       </Link>
     </div>
   );
