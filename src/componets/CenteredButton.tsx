@@ -2,9 +2,9 @@ import { Link } from "react-router-dom";
 
 const CenteredButton = () => {
   return (
-    <div className="d flex justify-content-center align-items-center vh-100 ">
+    <div>
       <Link to="/login" className="btn btn-primary">
-        Go to new page
+        Upload Pdf
       </Link>
     </div>
   );
