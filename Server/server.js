@@ -6,13 +6,11 @@ const upload = multer({ dest: 'uploads/' });
 
 
 
-
-
 app.get('/api', (req, res) => {
   res.send('Hello World');
 });
 
-app.post('/api/upload', (req, res) => {
+app.post('/api/upload', upload.single('file'), (req, res) => {
     res.send('File uploaded');
 });
 
