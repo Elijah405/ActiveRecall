@@ -1,10 +1,23 @@
 const express = require('express');
 const app = express();
 
-app.get("/api", (req, res) => {
-    res.json({ "users": ["user1", "user2"] });
+const multer = require('multer');
+const upload = multer({ dest: 'uploads/' });
+
+
+
+
+
+app.get('/api', (req, res) => {
+  res.send('Hello World');
 });
 
-app.listen(5000, () => {
-    console.log("Server is running on port 5000");
+app.post('/api/upload', (req, res) => {
+    res.send('File uploaded');
+});
+
+const port = process.env.PORT || 5000;
+
+app.listen(port, () => {
+  console.log(`Server is running on port ${port}`);
 });
