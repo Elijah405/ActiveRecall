@@ -11,7 +11,7 @@ app.get('/api', (req, res) => {
 });
 
 app.post('/api/upload', upload.single('file'), (req, res) => {
-    res.send('File uploaded');
+    res.json(req.file);
 });
 
 const port = process.env.PORT || 5000;
