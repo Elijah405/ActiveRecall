@@ -11,11 +11,11 @@ function WelcomePage() {
       </div>
 
       <div className="foreground-componet">
-        <CenteredButton text="/login" textDisplay="Upload Pdf" />
+        <CenteredButton text="/upload" textDisplay="Upload Pdf" />
       </div>
 
       <div className="foreground-componet">
-        <CenteredButton text="/upload" textDisplay="Uploads" />
+        <CenteredButton text="/view" textDisplay="Uploads" />
       </div>
 
       <div className="foreground-componet">
