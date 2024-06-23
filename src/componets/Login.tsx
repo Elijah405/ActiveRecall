@@ -1,7 +1,8 @@
-import { useEffect, useState, createContext } from "react";
+import { useEffect, useContext } from "react";
 import { jwtDecode } from "jwt-decode";
 import CenteredButton from "../componets/CenteredButton";
 import CenteredText from "../componets/CenteredText";
+import ContextData, { userToken } from "./Context";
 
 declare global {
   interface Window {
@@ -14,19 +15,23 @@ interface GoogleAuthResponse {
 }
 
 function Login() {
-  const [user, setUser] = useState({});
+  const context = useContext(ContextData);
 
-  // const UserContext = createContext({});
+  if (!context) {
+    throw new Error("ContextData must be used within a ContextProvider");
+  }
+
+  const { userData, setData } = context;
 
   function handleCallbackResponse(response: GoogleAuthResponse) {
     console.log("Encoded JWT ID token: " + response.credential);
-    const userObject = jwtDecode(response.credential);
+    const userObject = jwtDecode<userToken>(response.credential);
     console.log(userObject);
-    setUser(userObject);
+    setData(userObject);
+    console.log({ userData });
   }
 
   useEffect(() => {
-    /* global google */
     window.google.accounts.id.initialize({
       client_id:
         "656618212378-gbundb830lj2bksfpbvppi0tsktfc1fc.apps.googleusercontent.com",
@@ -51,7 +56,7 @@ function Login() {
       <div id="signInDiv"></div>
 
       <div>
-        {Object.keys(user).length > 0 ? (
+        {userData && Object.keys(userData).length > 0 ? (
           <div className="foreground-componet">
             <CenteredButton text="/welcome" textDisplay="Proceed" />
           </div>
