@@ -1,6 +1,6 @@
 import "./App.css";
 import WelcomePage from "./CombinedComponets/WelcomePage";
-import MainPage from "./Pages/MainPage";
+import UploadPage from "./Pages/UploadPage";
 
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import PDFPage from "./Pages/PDFPage";
@@ -16,7 +16,7 @@ function App() {
           <Routes>
             <Route path="/" element={<LoginPage />} />
             <Route path="/welcome" element={<WelcomePage />} />
-            <Route path="/upload" element={<MainPage />} />
+            <Route path="/upload" element={<UploadPage />} />
             <Route path="/view" element={<PDFPage />} />
             <Route path="/study" element={<RandomizerPage />} />
           </Routes>
