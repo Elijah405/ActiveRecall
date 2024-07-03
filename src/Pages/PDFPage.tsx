@@ -1,7 +1,9 @@
+import ProblemDisplay from "../componets/ProblemDisplay";
+
 function PDFPage() {
   return (
-    <div>
-      <h1>PDF Page</h1>
+    <div className=" bg-orange">
+      <ProblemDisplay />
     </div>
   );
 }

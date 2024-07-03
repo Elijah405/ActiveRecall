@@ -27,3 +27,21 @@ function App() {
 }
 
 export default App;
+
+// app.get('/api/pdfs', async (req, res) => {
+//   const userSub = req.headers['user-sub']; // Assume the sub is passed in the headers
+//   if (!userSub) {
+//     return res.status(400).send('No user sub provided.');
+//   }
+
+//   try {
+//     const [files] = await storage.bucket(bucketName).getFiles({
+//       prefix: `users/${userSub}/`
+//     });
+//     const pdfFiles = files.filter(file => file.name.endsWith('.pdf')).map(file => file.name);
+//     res.json(pdfFiles);
+//   } catch (error) {
+//     console.error("Error fetching PDFs:", error);
+//     res.status(500).send("Error fetching PDFs");
+//   }
+// });
