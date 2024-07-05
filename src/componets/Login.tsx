@@ -24,11 +24,8 @@ function Login() {
   const { userData, setData } = context;
 
   function handleCallbackResponse(response: GoogleAuthResponse) {
-    console.log("Encoded JWT ID token: " + response.credential);
     const userObject = jwtDecode<userToken>(response.credential);
-    console.log(userObject);
     setData(userObject);
-    console.log({ userData });
   }
 
   useEffect(() => {
@@ -46,6 +43,7 @@ function Login() {
       }
     );
   }, []);
+  console.log(userData);
 
   return (
     <div className="d-flex flex-column justify-content-center align-items-center bg-orange vh-100 ">

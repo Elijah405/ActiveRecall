@@ -1,5 +1,6 @@
 import CenteredText from "../componets/CenteredText";
 import FileUpload from "../componets/FileUpload";
+import CenteredButton from "../componets/CenteredButton";
 
 const UploadPage = () => {
   return (
@@ -10,6 +11,9 @@ const UploadPage = () => {
 
       <div className="foreground-componet">
         <FileUpload />
+      </div>
+      <div>
+        <CenteredButton text="/welcome" textDisplay="Home" />
       </div>
     </div>
   );

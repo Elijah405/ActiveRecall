@@ -1,8 +1,7 @@
 .pdf-container {
   display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   padding: 20px;
 }
 
@@ -10,8 +9,8 @@
   background-color: #fff;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: 250px; /* Adjusted width to make it smaller */
-  margin: 10px;
+  width: 60%; /* Adjusted to take a good portion of the page */
+  margin: 20px 0;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -36,9 +35,24 @@
   text-align: center;
 }
 
+.pdf-footer button {
+  margin: 5px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.pdf-footer button:hover {
+  background-color: #0056b3;
+}
+
 .pdf-footer a {
   color: #007bff;
   text-decoration: none;
+  margin-left: 10px;
 }
 
 .pdf-footer a:hover {
