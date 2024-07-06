@@ -6,11 +6,10 @@
 //   plugins: [react()],
 // })
 
-// vite.config.js
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 
 export default defineConfig({
-  plugins: [react()],
-  base: '/ActiveRecall/', // Set the base path to your repository name
+  base: '/ActiveRecall/', // Ensure this matches your repository name
+  plugins: [react()]
 });
