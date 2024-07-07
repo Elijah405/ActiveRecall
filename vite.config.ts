@@ -1,15 +1,10 @@
-// import { defineConfig } from 'vite'
-// import react from '@vitejs/plugin-react'
-
-// // https://vitejs.dev/config/
-// export default defineConfig({
-//   plugins: [react()],
-// })
-
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 
 export default defineConfig({
-  base: '/ActiveRecall/', // Ensure this matches your repository name
-  plugins: [react()]
+  plugins: [react()],
+  base: '/ActiveRecall/', // Ensure the base path is set correctly for GitHub Pages
+  build: {
+    outDir: 'dist',
+  },
 });
