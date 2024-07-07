@@ -3,7 +3,7 @@ import react from '@vitejs/plugin-react';
 
 export default defineConfig({
   plugins: [react()],
-  base: '/ActiveRecall/', // Ensure this matches the repository name
+  base: process.env.NODE_ENV === 'production' ? '/ActiveRecall/' : '/',
   build: {
     outDir: 'dist',
   },
