@@ -8,7 +8,7 @@ import LoginPage from "./CombinedComponets/LoginPage";
 import ContextProvider from "./componets/ContextProvider";
 
 // Set the basename based on the environment
-const basename = process.env.NODE_ENV === "production" ? "/ActiveRecall" : "/";
+const basename = process.env.NODE_ENV === "production" ? "/" : "/";
 
 function App() {
   return (
